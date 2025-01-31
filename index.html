@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Rock Paper Scissors</h1>
+      <div class="header-buttons">
+        <button class="toggle-mode" title="Toggle Theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <button class="reset-button" title="Reset Game">
+          <i class="fa-solid fa-arrow-rotate-left"></i>
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="game-container">
+        <div class="score-board">
+          <div class="score">
+            <h2>You</h2>
+            <p id="userScore">0</p>
+          </div>
+          <div class="score">
+            <h2>Computer</h2>
+            <p id="compScore">0</p>
+          </div>
+        </div>
+        <div class="message-container">
+          <p id="message">Make Your Move</p>
+        </div>
+        <div class="choices">
+          <button id="rock" class="choice" title="Rock"></button>
+          <button id="paper" class="choice" title="Paper"></button>
+          <button id="scissors" class="choice" title="Scissors"></button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Created by Me</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

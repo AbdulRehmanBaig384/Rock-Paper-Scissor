@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+:root {
+    --background-color: #f0f4f8;
+    --text-color: #333;
+    --primary-color: #4CAF50;
+    --secondary-color: #555;
+    --accent-color: #FF5722;
+    --button-bg: #ffffff;
+    --button-hover: #f0f0f0;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-dark: rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --button-bg: #1e1e1e;
+    --button-hover: #292929;
+    --shadow-light: rgba(255, 255, 255, 0.1);
+    --shadow-dark: rgba(255, 255, 255, 0.2);
+}
+
+header {
+    padding: 0.75rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--button-bg);
+    box-shadow: 0 2px 4px var(--shadow-light);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.header-buttons button {
+    font-size: 1.2rem;
+    margin: 0rem 4px;
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 4px 6px var(--shadow-light);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-buttons button:hover {
+    background-color: var(--accent-color);
+    box-shadow: 0 6px 10px var(--shadow-dark);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px);
+    padding: 2rem;
+}
+
+.game-container {
+    text-align: center;
+    background-color: var(--button-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px var(--shadow-light);
+    max-width: 600px;
+    width: 100%;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.score {
+    text-align: center;
+}
+
+.score h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.score p {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.message-container {
+    margin-bottom: 2rem;
+}
+
+.message-container p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.choice {
+    width: 100px;
+    height: 100px;
+    background-color: var(--button-bg);
+    border: 3px solid transparent;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.choice:hover {
+    transform: scale(1.1);
+    border-color: var(--primary-color);
+    box-shadow: 0 6px 12px var(--shadow-dark);
+}
+
+#rock {
+    background-image: url('assets/rock.jpg');
+    background-color: #f083a2;
+}
+
+#paper {
+    background-image: url('assets/paper.jpg');
+    background-color: #c38edc;
+}
+
+#scissors {
+    background-image: url('assets/scissor.jpg');
+    background-color: #7facff;
+}
+
+footer {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--button-bg);
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 4px var(--shadow-light);
+}
+
+@media (max-width: 768px) {
+    .score-board {
+        gap: 1rem;
+    }
+
+    .choices {
+        flex-wrap: wrap;
+    }
+
+    .choice {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    header{
+        padding: 0.75rem 1.5rem;
+    }
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .choice {
+        width: 60px;
+        height: 60px;
+    }
+
+    .message-container p {
+        font-size: 1.2rem;
+    }
+    .header-buttons button{
+        height: 35px;
+        width: 35px;
+        font-size: 1rem;
+        margin: 0px;
+}
+}
